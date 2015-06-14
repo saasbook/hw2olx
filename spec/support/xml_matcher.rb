@@ -118,11 +118,11 @@ RSpec::Matchers.define :have_xml_element do |expected,options={}|
     @attribute_value = value
   end
 
-  failure_message_for_should do |actual|
+  failure_message do |actual|
     "expected \n\n#{actual}\n to have XML element #{expected.inspect}#{message_extension}, but it didn't"
   end
 
-  failure_message_for_should_not do |actual|
+  failure_message_when_negated do |actual|
     "expected \n\n#{actual}\n to not have XML element #{expected.inspect}#{message_extension}, but it did"
   end
   

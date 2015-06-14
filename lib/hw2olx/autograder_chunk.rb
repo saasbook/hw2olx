@@ -21,7 +21,9 @@ class Hw2Olx::AutograderChunk < Hw2Olx::Chunk
   def to_edxml
     @xml.problem do
       @xml.startouttext
-      @xml << @raw_data
+      @xml.div do
+        @xml << @raw_data
+      end
       @xml.endouttext
       @xml << self.autograder_form
     end

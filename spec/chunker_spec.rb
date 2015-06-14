@@ -4,7 +4,7 @@ require 'hw2olx/chunker'
 describe 'chunkifying' do
   describe 'valid file' do
     before(:each) do
-      @chunker = Hw2Olx::Chunker.new('spec/fixtures/valid_5_chunk.html')
+      @chunker = Hw2Olx::Chunker.new('spec/fixtures/valid_8_chunk.md')
     end
     it 'has 3 verticals' do
       expect(@chunker.chunks.length).to eq(3)
@@ -14,12 +14,10 @@ describe 'chunkifying' do
     end
   end
   it 'should accept valid file' do
-    expect { Hw2Olx::Chunker.new('spec/fixtures/valid_5_chunk.html') }.not_to raise_error
+    expect { Hw2Olx::Chunker.new('spec/fixtures/valid_8_chunk.md') }.not_to raise_error
   end
   describe 'invalid file' do
     tests = {
-      'invalid_root_not_html' => 'root node must be <html>',
-      'invalid_no_body' => 'no <body> found',
       'invalid_content_outside_divs' => 'first element must be <h1>',
     }
     tests.each_pair do |fixture, error|
