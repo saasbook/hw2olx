@@ -1,0 +1,14 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    builder (3.2.2)
+    getopt (1.4.2)
+    redcarpet (3.2.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  builder
+  getopt
+  redcarpet

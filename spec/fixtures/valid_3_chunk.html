@@ -1,0 +1,24 @@
+<html>
+  <head></head>
+  <body>
+    <h1>Part 1</h1>  <!-- chunk 1: html -->
+    <p>Some explanatory text.</p>
+    <div class="autograder" data-display-name="Submit">  <!-- chunk 2: autograder -->
+      <p>Submit your solution.</p>
+    </div>
+    <h1>Part 2</h1>   <!-- chunk 3: html -->
+    <p>More text.</p>
+    <h2>Explanation</h2>
+    <p>Including this.</p>
+    <h1>Part 3</h1>  <!-- chunk 4: more html -->
+    <p>part 3</p>
+    <script language="ruql" data-display-name="Self-check"> <!-- chunk 5; ruql -->
+     choice_answer do 
+       text 'True or false?'
+       distractor false
+       answer true
+       explanation 'You got it.'
+     end
+    </script>
+  </body>
+</html>
